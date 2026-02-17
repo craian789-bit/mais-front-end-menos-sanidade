@@ -1,46 +1,74 @@
-
-body{
+body {
     background: hsl(212, 45%, 89%);
-     margin: 0%;
-     min-height: 100vh;
-     align-items: center;
-     align-content: center;
-    justify-items: center;
-    }
-
-.conteiner{
-    background-color:  white;
-    border-radius:25px;
-    align-items: center;
-    justify-items: center;
-    padding: 2%;
-    width: 300px;
-    height: 510px;
-  box-shadow: 10px black;
+    margin: 0;
+    min-height: 100vh;
+    display: grid;         /* Grid é mais fácil para centralizar um único item */
+    place-items: center;   /* Centraliza horizontal e verticalmente */
+    font-family: 'Arial', sans-serif;
 }
 
-.qr{
-    position: relative;
-    display: flex;
-    width: 290px;
-    height:290px;
-    border-radius: 25px;
-}
-.top{
-    padding: 1%;
-    margin: 10px;
-    font-size: 18px;
-    color:hsl(218, 44%, 22%);
+.conteiner {
+    background-color: white;
+    border-radius: 20px;
+    padding: 16px;         /* Espaço interno igual em todos os lados */
+    width: 320px;          /* Largura padrão do design */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Sombra suave, não preta pura */
     text-align: center;
 }
 
-.attribution{
-    text-align: center;
-    display: inline-block;
-   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    font-weight: 400;
-    font-size: 15;
+.qr {
+    width: 100%;           /* Faz a imagem ocupar a largura do container */
+    height: auto;
+    border-radius: 10px;
 }
-.linha{
+
+.top {
+    font-size: 22px;       /* Tamanho maior para o título */
+    color: hsl(218, 44%, 22%);
+    margin: 24px 0 16px 0;
+    line-height: 1.2;
+}
+
+.descricao {
+    font-size: 15px;       /* Sempre coloque 'px' */
+    color: hsl(220, 15%, 55%); /* Cinza claro do desafio */
+    margin-bottom: 30px;
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
+/* --- Identificação dos Links --- */
+
+.attribution {
+    font-size: 11px;
+    color: hsl(220, 15%, 55%);
+}
+
+/* Link do Frontend Mentor (Azul mais escuro) */
+.link-mentor {
     text-decoration: none;
+    color: #3e52a3;
+    font-weight: bold;
+}
+
+/* Link do seu GitHub (Verde ou outra cor para destacar) */
+.link-github {
+    text-decoration: none;
+    color: #24292e; /* Cor padrão do GitHub */
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+}
+
+/* Efeito ao passar o mouse */
+.link-mentor:hover, .link-github:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 375px) {
+    .top {
+        font-size: 1.1rem; /* Diminui um pouco o título se a tela for minúscula */
+    }
+    .descricao {
+        font-size: 0.9rem;
+    }
 }
